@@ -72,11 +72,11 @@ int main()
 {
     int size,value,sum;
  
-    cout << "请输入数组元素个数：" << endl;
+    cout << "请输入数组元素个数(大于等于2的整数):" << endl;
     do{
         cin >> size;
         if(size < 2){
-		cout << "个数小于2，请重新输入:" << endl;
+		cout << "元素个数小于2，请重新输入:" << endl;
 	}
     }while(size < 2);
 	
@@ -96,7 +96,7 @@ int main()
 
     heapSort(a,size);
 
-    cout << "和为" << sum <<"的两个数::" << endl;
+    cout << "和为" << sum <<"的两个数:" << endl;
     find(&a[1],size,sum);
 
     delete []a;
