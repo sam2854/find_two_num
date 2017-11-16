@@ -73,7 +73,13 @@ int main()
     int size,value,sum;
  
     cout << "请输入数组元素个数：" << endl;
-    cin >> size;
+    do{
+        cin >> size;
+        if(size < 2){
+		cout << "个数小于2，请重新输入:" << endl;
+	}
+    }while(size < 2);
+	
     int *a=new int[size+1];
     cout << "请输入"<<size<<"个整数：" << endl;
     
